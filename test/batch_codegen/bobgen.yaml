@@ -1,0 +1,9 @@
+output: generated
+pkgname: generated
+wipe: true
+no_tests: false
+
+psql:
+  dsn: "${PGX_TEST_DSN}"
+  queries:
+    - queries
