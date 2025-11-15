@@ -1,10 +1,20 @@
 # pgx.Batch Support in Bob ORM
 
-This document explains how to use PostgreSQL batch operations with Bob ORM through the pgx driver.
+**⚠️ IMPORTANT**: Batch operations **ONLY work with the pgx native driver**. They do NOT work with `lib/pq` or `pgx/stdlib`.
+
+This document explains how to use PostgreSQL batch operations with Bob ORM through the **pgx native driver**.
 
 ## Overview
 
-Batch operations allow you to execute multiple queries in a single round-trip to the database, significantly improving performance when executing many queries. Bob's pgx driver provides full support for pgx.Batch operations with an easy-to-use API that integrates seamlessly with Bob's query builder.
+Batch operations allow you to execute multiple queries in a single round-trip to the database, significantly improving performance when executing many queries.
+
+**Requirements:**
+- ✅ PostgreSQL database
+- ✅ **pgx native driver** (`github.com/stephenafamo/bob/drivers/pgx`)
+- ❌ **NOT** `lib/pq` (doesn't support batching)
+- ❌ **NOT** `pgx/stdlib` (database/sql interface blocks batching)
+
+Bob's pgx driver provides full support for pgx.Batch operations with an easy-to-use API that integrates seamlessly with Bob's query builder.
 
 ## Features
 

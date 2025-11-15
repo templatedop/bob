@@ -1,5 +1,7 @@
 # Batch Query Code Generation
 
+**⚠️ IMPORTANT**: Batch operations **ONLY work with PostgreSQL using the pgx native driver**. They do NOT work with `lib/pq`, `pgx/stdlib`, MySQL, or SQLite.
+
 Bob can now auto-generate batch-enabled query functions from SQL definitions with the `:batch` annotation.
 
 ## Overview

@@ -212,9 +212,18 @@ SELECT
 
 ## Batch Query Generation
 
-:::info PostgreSQL Only
+:::danger PostgreSQL with pgx Native Driver ONLY
 
-Batch query generation is currently only available for PostgreSQL when using the `pgx` driver.
+Batch operations **ONLY work** with:
+- ✅ PostgreSQL database
+- ✅ **pgx native driver** (`github.com/stephenafamo/bob/drivers/pgx`)
+
+**Will NOT work** with:
+- ❌ `lib/pq` driver
+- ❌ `pgx/stdlib` driver
+- ❌ MySQL or SQLite
+
+If you're using PostgreSQL, you should be using pgx native anyway for better performance and features.
 
 :::
 
