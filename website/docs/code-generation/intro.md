@@ -23,7 +23,8 @@ Bob is a "database-first" ORM. That means you must first create your database sc
 
 - Full model generation
 - Generates **factories** for easy testing
-- Generates code for hand-written **SQL** queries (similar to [sqlc](https://sqlc.dev)).
+- Generates code for hand-written **SQL** queries (similar to [sqlc](https://sqlc.dev))
+- **Batch operations** support for PostgreSQL (10-100x performance improvement) - [Learn more](./batch-operations)
 - Extremely fast code generation
 - High performance through generation & intelligent caching
 - Uses bob.Executor (simple interface, sql.DB, sql.Tx, sqlx.DB etc. compatible)

@@ -1,0 +1,22 @@
+# Bob code generation configuration for batch API example
+
+output: generated
+pkgname: db
+wipe: true
+no_tests: false
+
+# PostgreSQL driver configuration
+psql:
+  # Database connection (uses environment variable)
+  dsn: "${DATABASE_URL:-postgres://batchuser:batchpass@localhost:5432/batchapi?sslmode=disable}"
+
+  # Folders containing SQL query files
+  queries:
+    - queries
+
+  # Schemas to include
+  schemas:
+    - public
+
+  # Driver for generated code
+  driver: "github.com/jackc/pgx/v5/stdlib"
