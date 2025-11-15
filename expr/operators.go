@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/stephenafamo/bob"
+	"github.com/templatedop/bob"
 )
 
 // An operator that has a left and right side

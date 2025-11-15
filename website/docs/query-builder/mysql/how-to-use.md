@@ -11,11 +11,11 @@ Import the `mysql` package and the query mod packages for the different query ty
 
 ```go
 import (
-    "github.com/stephenafamo/bob/dialect/mysql"
-    "github.com/stephenafamo/bob/dialect/mysql/sm"
-    "github.com/stephenafamo/bob/dialect/mysql/im"
-    "github.com/stephenafamo/bob/dialect/mysql/um"
-    "github.com/stephenafamo/bob/dialect/mysql/dm"
+    "github.com/templatedop/bob/dialect/mysql"
+    "github.com/templatedop/bob/dialect/mysql/sm"
+    "github.com/templatedop/bob/dialect/mysql/im"
+    "github.com/templatedop/bob/dialect/mysql/um"
+    "github.com/templatedop/bob/dialect/mysql/dm"
 )
 
 func main() {
@@ -46,10 +46,10 @@ func main() {
 View the reference for the query mod packages:
 
 * [X] Raw
-* [X] Select: [Query Mods](https://pkg.go.dev/github.com/stephenafamo/bob/dialect/mysql/sm)
-* [X] Insert: [Query Mods](https://pkg.go.dev/github.com/stephenafamo/bob/dialect/mysql/im)
-* [X] Update: [Query Mods](https://pkg.go.dev/github.com/stephenafamo/bob/dialect/mysql/um)
-* [X] Delete: [Query Mods](https://pkg.go.dev/github.com/stephenafamo/bob/dialect/mysql/dm)
+* [X] Select: [Query Mods](https://pkg.go.dev/github.com/templatedop/bob/dialect/mysql/sm)
+* [X] Insert: [Query Mods](https://pkg.go.dev/github.com/templatedop/bob/dialect/mysql/im)
+* [X] Update: [Query Mods](https://pkg.go.dev/github.com/templatedop/bob/dialect/mysql/um)
+* [X] Delete: [Query Mods](https://pkg.go.dev/github.com/templatedop/bob/dialect/mysql/dm)
 
 ### Starters
 

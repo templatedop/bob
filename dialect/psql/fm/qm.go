@@ -1,10 +1,10 @@
 package fm
 
 import (
-	"github.com/stephenafamo/bob"
-	"github.com/stephenafamo/bob/clause"
-	"github.com/stephenafamo/bob/dialect/psql/dialect"
-	"github.com/stephenafamo/bob/mods"
+	"github.com/templatedop/bob"
+	"github.com/templatedop/bob/clause"
+	"github.com/templatedop/bob/dialect/psql/dialect"
+	"github.com/templatedop/bob/mods"
 )
 
 func Distinct() bob.Mod[*dialect.Function] {

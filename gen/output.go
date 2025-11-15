@@ -13,8 +13,8 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/stephenafamo/bob/gen/drivers"
-	"github.com/stephenafamo/bob/gen/language"
+	"github.com/templatedop/bob/gen/drivers"
+	"github.com/templatedop/bob/gen/language"
 )
 
 type Output struct {

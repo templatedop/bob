@@ -5,7 +5,7 @@ import (
 	"errors"
 	"io"
 
-	"github.com/stephenafamo/bob"
+	"github.com/templatedop/bob"
 )
 
 var ErrNoCombinationStrategy = errors.New("combination strategy must be set")

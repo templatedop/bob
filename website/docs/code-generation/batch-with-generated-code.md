@@ -86,7 +86,7 @@ psql:
 
 ```bash
 # Install generator
-go install github.com/stephenafamo/bob/gen/dopgen-psql@latest
+go install github.com/templatedop/bob/gen/dopgen-psql@latest
 
 # Generate code from queries
 dopgen-psql -c bobgen.yaml
@@ -116,7 +116,7 @@ package main
 import (
     "context"
     "github.com/jackc/pgx/v5"
-    bobpgx "github.com/stephenafamo/bob/drivers/pgx"
+    bobpgx "github.com/templatedop/bob/drivers/pgx"
 )
 
 func BulkInsertProducts(ctx context.Context, pool bobpgx.Pool, products []Product) error {
@@ -162,7 +162,7 @@ package main
 import (
     "context"
     "github.com/jackc/pgx/v5"
-    bobpgx "github.com/stephenafamo/bob/drivers/pgx"
+    bobpgx "github.com/templatedop/bob/drivers/pgx"
     "yourapp/generated/queries"
 )
 
@@ -206,7 +206,7 @@ package main
 import (
     "context"
     "github.com/jackc/pgx/v5"
-    bobpgx "github.com/stephenafamo/bob/drivers/pgx"
+    bobpgx "github.com/templatedop/bob/drivers/pgx"
     "yourapp/generated/queries"
 )
 
@@ -305,7 +305,7 @@ import (
     "context"
     "fmt"
     "github.com/jackc/pgx/v5"
-    bobpgx "github.com/stephenafamo/bob/drivers/pgx"
+    bobpgx "github.com/templatedop/bob/drivers/pgx"
 )
 
 type Order struct {

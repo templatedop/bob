@@ -1,8 +1,8 @@
 package mysql
 
 import (
-	"github.com/stephenafamo/bob"
-	"github.com/stephenafamo/bob/dialect/mysql/dialect"
+	"github.com/templatedop/bob"
+	"github.com/templatedop/bob/dialect/mysql/dialect"
 )
 
 func Select(queryMods ...bob.Mod[*dialect.SelectQuery]) bob.BaseQuery[*dialect.SelectQuery] {

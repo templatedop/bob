@@ -10,11 +10,11 @@ import (
 	"testing"
 
 	"github.com/go-sql-driver/mysql"
-	"github.com/stephenafamo/bob/gen"
-	helpers "github.com/stephenafamo/bob/gen/bobgen-helpers"
-	"github.com/stephenafamo/bob/gen/drivers"
-	testfiles "github.com/stephenafamo/bob/test/files"
-	testgen "github.com/stephenafamo/bob/test/gen"
+	"github.com/templatedop/bob/gen"
+	helpers "github.com/templatedop/bob/gen/bobgen-helpers"
+	"github.com/templatedop/bob/gen/drivers"
+	testfiles "github.com/templatedop/bob/test/files"
+	testgen "github.com/templatedop/bob/test/gen"
 	"github.com/testcontainers/testcontainers-go"
 	mysqltest "github.com/testcontainers/testcontainers-go/modules/mysql"
 )

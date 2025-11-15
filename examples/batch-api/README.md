@@ -27,7 +27,7 @@ This starts PostgreSQL on `localhost:5432` with:
 
 ```bash
 # Install code generator
-go install github.com/stephenafamo/bob/gen/dopgen-psql@latest
+go install github.com/templatedop/bob/gen/dopgen-psql@latest
 
 # Generate from queries (uses bobgen.yaml)
 dopgen-psql -c bobgen.yaml

@@ -13,7 +13,7 @@ import (
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/jackc/pgx/v5"
-	bobpgx "github.com/stephenafamo/bob/drivers/pgx"
+	bobpgx "github.com/templatedop/bob/drivers/pgx"
 )
 
 // Product represents a product in the system

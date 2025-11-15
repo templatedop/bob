@@ -4,8 +4,8 @@ import (
 	"context"
 	"strings"
 
-	"github.com/stephenafamo/bob"
-	"github.com/stephenafamo/bob/expr"
+	"github.com/templatedop/bob"
+	"github.com/templatedop/bob/expr"
 )
 
 type Expression struct {

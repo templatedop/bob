@@ -5,13 +5,13 @@ import (
 	"testing"
 
 	"github.com/antlr4-go/antlr/v4"
-	"github.com/stephenafamo/bob"
-	"github.com/stephenafamo/bob/dialect/mysql"
-	"github.com/stephenafamo/bob/dialect/mysql/dialect"
-	"github.com/stephenafamo/bob/dialect/mysql/fm"
-	"github.com/stephenafamo/bob/dialect/mysql/sm"
-	"github.com/stephenafamo/bob/dialect/mysql/wm"
-	testutils "github.com/stephenafamo/bob/test/utils"
+	"github.com/templatedop/bob"
+	"github.com/templatedop/bob/dialect/mysql"
+	"github.com/templatedop/bob/dialect/mysql/dialect"
+	"github.com/templatedop/bob/dialect/mysql/fm"
+	"github.com/templatedop/bob/dialect/mysql/sm"
+	"github.com/templatedop/bob/dialect/mysql/wm"
+	testutils "github.com/templatedop/bob/test/utils"
 	mysqlparser "github.com/stephenafamo/sqlparser/mysql"
 )
 

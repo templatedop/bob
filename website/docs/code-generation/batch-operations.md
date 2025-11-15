@@ -35,7 +35,7 @@ Batch operations allow you to send multiple SQL statements to the database in a 
 
 - **New to batches?** Start with [Quick Start (5 min)](./batch-quick-start)
 - **Using generated code?** See [Batches with Generated Code](./batch-with-generated-code)
-- **Full example project:** [examples/batch-api](https://github.com/stephenafamo/bob/tree/main/examples/batch-api)
+- **Full example project:** [examples/batch-api](https://github.com/templatedop/bob/tree/main/examples/batch-api)
 
 ## Complete Workflow
 
@@ -131,10 +131,10 @@ Run the code generator:
 
 ```bash
 # Using go run
-go run github.com/stephenafamo/bob/gen/dopgen-psql@latest -c bobgen.yaml
+go run github.com/templatedop/bob/gen/dopgen-psql@latest -c bobgen.yaml
 
 # Or install globally
-go install github.com/stephenafamo/bob/gen/dopgen-psql@latest
+go install github.com/templatedop/bob/gen/dopgen-psql@latest
 dopgen-psql -c bobgen.yaml
 ```
 
@@ -163,7 +163,7 @@ import (
     "log"
 
     "github.com/jackc/pgx/v5"
-    bobpgx "github.com/stephenafamo/bob/drivers/pgx"
+    bobpgx "github.com/templatedop/bob/drivers/pgx"
     "yourapp/generated/queries"
 )
 
@@ -355,7 +355,7 @@ import (
     "time"
 
     "github.com/jackc/pgx/v5"
-    bobpgx "github.com/stephenafamo/bob/drivers/pgx"
+    bobpgx "github.com/templatedop/bob/drivers/pgx"
     "github.com/go-chi/chi/v5"
 )
 
@@ -871,7 +871,7 @@ _, err := conn.ExecContext(ctx, "SELECT 1") // OK now
 - [Bob Documentation](https://bob.stephenafamo.com/)
 - [pgx Batch Documentation](https://pkg.go.dev/github.com/jackc/pgx/v5#Batch)
 - [PostgreSQL Protocol](https://www.postgresql.org/docs/current/protocol.html)
-- [Example Code](https://github.com/stephenafamo/bob/tree/main/test/batch_codegen)
+- [Example Code](https://github.com/templatedop/bob/tree/main/test/batch_codegen)
 
 ## Next Steps
 

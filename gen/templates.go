@@ -9,9 +9,9 @@ import (
 	"unicode"
 
 	"github.com/Masterminds/sprig/v3"
-	"github.com/stephenafamo/bob/gen/drivers"
-	"github.com/stephenafamo/bob/gen/language"
-	"github.com/stephenafamo/bob/internal"
+	"github.com/templatedop/bob/gen/drivers"
+	"github.com/templatedop/bob/gen/language"
+	"github.com/templatedop/bob/internal"
 	"github.com/volatiletech/strmangle"
 )
 

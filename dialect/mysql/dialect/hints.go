@@ -6,7 +6,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/stephenafamo/bob"
+	"github.com/templatedop/bob"
 )
 
 type hints struct {

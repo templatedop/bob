@@ -1,8 +1,8 @@
 package sqlite
 
 import (
-	"github.com/stephenafamo/bob"
-	"github.com/stephenafamo/bob/mods"
+	"github.com/templatedop/bob"
+	"github.com/templatedop/bob/mods"
 )
 
 type Filterable interface {

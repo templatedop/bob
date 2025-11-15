@@ -20,7 +20,7 @@ See the reference for these types:
 
 ## `bob.DB`
 
-[Reference](https://pkg.go.dev/github.com/stephenafamo/bob#DB)
+[Reference](https://pkg.go.dev/github.com/templatedop/bob#DB)
 
 Convert an existing `*sql.DB` to `bob.DB` with `bob.NewDB()`
 
@@ -28,13 +28,13 @@ Open a DB connection and return `bob.DB` with `bob.Open()`. This is the same as 
 
 ## `bob.Tx`
 
-[Reference](https://pkg.go.dev/github.com/stephenafamo/bob#Tx)
+[Reference](https://pkg.go.dev/github.com/templatedop/bob#Tx)
 
 Convert an existing `*sql.Tx` to `bob.Tx` with `bob.NewTx()`
 
 ## `bob.Conn`
 
-[Reference](https://pkg.go.dev/github.com/stephenafamo/bob#Conn)
+[Reference](https://pkg.go.dev/github.com/templatedop/bob#Conn)
 
 Convert an existing `*sql.Conn` to `bob.Conn` with `bob.NewConn()`
 

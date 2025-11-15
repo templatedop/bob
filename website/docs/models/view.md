@@ -11,9 +11,9 @@ To create a View model, use the `NewView()` function.
 
 ```go
 import (
-	"github.com/stephenafamo/bob"
-	"github.com/stephenafamo/bob/expr"
-	"github.com/stephenafamo/bob/dialect/psql"
+	"github.com/templatedop/bob"
+	"github.com/templatedop/bob/expr"
+	"github.com/templatedop/bob/dialect/psql"
 )
 
 type User struct {
@@ -43,15 +43,15 @@ Similar to `Name()`, but adds an alias. e.g. `"public"."users" as "public.users"
 
 ```go
 import (
-	"github.com/stephenafamo/bob/dialect/psql"
-	"github.com/stephenafamo/bob/dialect/psql/sm"
+	"github.com/templatedop/bob/dialect/psql"
+	"github.com/templatedop/bob/dialect/psql/sm"
 )
 query := psql.Select(sm.From(userView.NameAs()))
 ```
 
 ## Columns
 
-A [`expr.Columns`](https://pkg.go.dev/github.com/stephenafamo/bob/expr.Columns) field.
+A [`expr.Columns`](https://pkg.go.dev/github.com/templatedop/bob/expr.Columns) field.
 This is also a bob [expression](../query-builder/building-queries#expressions). Which by default, the expression evaluates to:
 
 ```sql
@@ -69,8 +69,8 @@ The `Query()` method on a View model starts a SELECT query on the model's databa
 
 ```go
 import (
-	"github.com/stephenafamo/bob/dialect/psql"
-	"github.com/stephenafamo/bob/dialect/psql/sm"
+	"github.com/templatedop/bob/dialect/psql"
+	"github.com/templatedop/bob/dialect/psql/sm"
 )
 
 query := userView.Query(

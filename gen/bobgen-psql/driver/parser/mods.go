@@ -5,8 +5,8 @@ import (
 	"strconv"
 
 	pg "github.com/pganalyze/pg_query_go/v6"
-	"github.com/stephenafamo/bob/clause"
-	"github.com/stephenafamo/bob/internal"
+	"github.com/templatedop/bob/clause"
+	"github.com/templatedop/bob/internal"
 )
 
 type combine struct {
@@ -164,7 +164,7 @@ func (w *walker) modSelectStatement(stmt *pg.Node_SelectStmt, info nodeInfo) {
 	}
 
 	if len(combines) > 0 {
-		w.imports = append(w.imports, []string{"github.com/stephenafamo/bob/clause"})
+		w.imports = append(w.imports, []string{"github.com/templatedop/bob/clause"})
 	}
 	for i := len(combines) - 1; i >= 0; i-- {
 		combine := combines[i]
@@ -202,13 +202,13 @@ func (w *walker) modSelectStatement(stmt *pg.Node_SelectStmt, info nodeInfo) {
 	}
 
 	if limitInfo, ok := info.children["LimitCount"]; ok {
-		w.imports = append(w.imports, []string{"github.com/stephenafamo/bob/dialect/psql"})
+		w.imports = append(w.imports, []string{"github.com/templatedop/bob/dialect/psql"})
 		rawLimit := w.input[limitInfo.start:limitInfo.end]
 		switch stmt.SelectStmt.LimitOption {
 		case pg.LimitOption_LIMIT_OPTION_COUNT:
 			fmt.Fprintf(w.mods, "q.CombinedLimit.SetLimit(psql.Raw(%q))\n", rawLimit)
 		case pg.LimitOption_LIMIT_OPTION_WITH_TIES:
-			w.imports = append(w.imports, []string{"github.com/stephenafamo/bob/clause"})
+			w.imports = append(w.imports, []string{"github.com/templatedop/bob/clause"})
 			fmt.Fprintf(w.mods, `q.CombinedFetch.SetFetch(clause.Fetch{
 					Count: psql.Raw(%q),
 					WithTies: true,
@@ -218,7 +218,7 @@ func (w *walker) modSelectStatement(stmt *pg.Node_SelectStmt, info nodeInfo) {
 	}
 
 	if offsetInfo, ok := info.children["LimitOffset"]; ok {
-		w.imports = append(w.imports, []string{"github.com/stephenafamo/bob/dialect/psql"})
+		w.imports = append(w.imports, []string{"github.com/templatedop/bob/dialect/psql"})
 		rawOffset := w.input[offsetInfo.start:offsetInfo.end]
 		fmt.Fprintf(w.mods, "q.CombinedOffset.SetOffset(psql.Raw(%q))\n", rawOffset)
 	}
@@ -267,7 +267,7 @@ func (w *walker) modSelectStatement(stmt *pg.Node_SelectStmt, info nodeInfo) {
 			bobLock.Tables = []string{w.input[lockInfo.start:lockInfo.end]}
 		}
 
-		w.imports = append(w.imports, []string{"github.com/stephenafamo/bob/clause"})
+		w.imports = append(w.imports, []string{"github.com/templatedop/bob/clause"})
 		fmt.Fprintf(w.mods, "q.AppendLock(%#v)\n", bobLock)
 	}
 }

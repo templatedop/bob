@@ -79,7 +79,7 @@ Without it, Bob only generates models from database tables, not query functions.
 
 ```bash
 # Install generator
-go install github.com/stephenafamo/bob/gen/dopgen-psql@latest
+go install github.com/templatedop/bob/gen/dopgen-psql@latest
 
 # Generate code
 dopgen-psql -c bobgen.yaml
@@ -99,7 +99,7 @@ import (
     "time"
 
     "github.com/jackc/pgx/v5"
-    bobpgx "github.com/stephenafamo/bob/drivers/pgx"
+    bobpgx "github.com/templatedop/bob/drivers/pgx"
 )
 
 func main() {
@@ -338,7 +338,7 @@ func ProcessOrder(ctx context.Context, pool bobpgx.Pool, order Order) error {
 Now that you've seen the basics:
 
 1. **[Complete Guide](./batch-operations)** - Learn all batch operation patterns
-2. **[Full Example Project](https://github.com/stephenafamo/bob/tree/main/examples/batch-api)** - Complete REST API with batching
+2. **[Full Example Project](https://github.com/templatedop/bob/tree/main/examples/batch-api)** - Complete REST API with batching
 3. **[Error Handling](./batch-operations#error-handling-best-practices)** - Production-ready error handling
 4. **[Advanced Patterns](./batch-operations#advanced-patterns)** - Chunking, progress tracking, etc.
 
@@ -374,4 +374,4 @@ docker rm bob-batch-demo
 **Ready for production?** Check out:
 - [Complete Guide](./batch-operations) - All features and patterns
 - [Batches with Generated Code](./batch-with-generated-code) - Integration guide
-- [Example Project](https://github.com/stephenafamo/bob/tree/main/examples/batch-api) - Full REST API
+- [Example Project](https://github.com/templatedop/bob/tree/main/examples/batch-api) - Full REST API

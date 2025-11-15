@@ -11,11 +11,11 @@ Import the `sqlite` package and the query mod packages for the different query t
 
 ```go
 import (
-    "github.com/stephenafamo/bob/dialect/sqlite"
-    "github.com/stephenafamo/bob/dialect/sqlite/sm"
-    "github.com/stephenafamo/bob/dialect/sqlite/im"
-    "github.com/stephenafamo/bob/dialect/sqlite/um"
-    "github.com/stephenafamo/bob/dialect/sqlite/dm"
+    "github.com/templatedop/bob/dialect/sqlite"
+    "github.com/templatedop/bob/dialect/sqlite/sm"
+    "github.com/templatedop/bob/dialect/sqlite/im"
+    "github.com/templatedop/bob/dialect/sqlite/um"
+    "github.com/templatedop/bob/dialect/sqlite/dm"
 )
 
 func main() {
@@ -46,10 +46,10 @@ func main() {
 View the reference for the query mod packages:
 
 * [X] Raw
-* [X] Select: [Query Mods](https://pkg.go.dev/github.com/stephenafamo/bob/dialect/sqlite/sm)
-* [X] Insert: [Query Mods](https://pkg.go.dev/github.com/stephenafamo/bob/dialect/sqlite/im)
-* [X] Update: [Query Mods](https://pkg.go.dev/github.com/stephenafamo/bob/dialect/sqlite/um)
-* [X] Delete: [Query Mods](https://pkg.go.dev/github.com/stephenafamo/bob/dialect/sqlite/dm)
+* [X] Select: [Query Mods](https://pkg.go.dev/github.com/templatedop/bob/dialect/sqlite/sm)
+* [X] Insert: [Query Mods](https://pkg.go.dev/github.com/templatedop/bob/dialect/sqlite/im)
+* [X] Update: [Query Mods](https://pkg.go.dev/github.com/templatedop/bob/dialect/sqlite/um)
+* [X] Delete: [Query Mods](https://pkg.go.dev/github.com/templatedop/bob/dialect/sqlite/dm)
 
 ### Starters
 

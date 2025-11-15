@@ -6,10 +6,10 @@ import (
 	"testing"
 
 	_ "github.com/lib/pq"
-	"github.com/stephenafamo/bob"
-	"github.com/stephenafamo/bob/dialect/psql/dialect"
-	"github.com/stephenafamo/bob/dialect/psql/sm"
-	"github.com/stephenafamo/bob/expr"
+	"github.com/templatedop/bob"
+	"github.com/templatedop/bob/dialect/psql/dialect"
+	"github.com/templatedop/bob/dialect/psql/sm"
+	"github.com/templatedop/bob/expr"
 )
 
 type someStruct struct {

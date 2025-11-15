@@ -10,7 +10,7 @@ import (
 
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
-	bobpgx "github.com/stephenafamo/bob/drivers/pgx"
+	bobpgx "github.com/templatedop/bob/drivers/pgx"
 )
 
 func TestBatchCodeGeneration(t *testing.T) {

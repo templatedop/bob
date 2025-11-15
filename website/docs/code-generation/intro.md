@@ -51,7 +51,7 @@ Bob is a "database-first" ORM. That means you must first create your database sc
 
 ## Generating code
 
-The code generator is run through the dialect specific command in the [gen](https://pkg.go.dev/github.com/stephenafamo/bob/gen#section-directories) package.
+The code generator is run through the dialect specific command in the [gen](https://pkg.go.dev/github.com/templatedop/bob/gen#section-directories) package.
 All code generator commands require connection information for your database (to parse the database structure).
 This can be provided either through an (dialect specific) environment variable or through a configuration file.
 See [configuration](./configuration) for details and other customizable options.
@@ -62,37 +62,37 @@ See [configuration](./configuration) for details and other customizable options.
 
 ```sh
 # With env variable
-PSQL_DSN=postgres://user:pass@host:port/dbname go run github.com/stephenafamo/bob/gen/dopgen-psql@latest
+PSQL_DSN=postgres://user:pass@host:port/dbname go run github.com/templatedop/bob/gen/dopgen-psql@latest
 
 # With configuration file
-go run github.com/stephenafamo/bob/gen/dopgen-psql@latest -c ./config/bobgen.yaml
+go run github.com/templatedop/bob/gen/dopgen-psql@latest -c ./config/bobgen.yaml
 ```
 **MySQL**
 
 ```sh
 # With env variable
-MYSQL_DSN=user:pass@tcp(host:port)/dbname go run github.com/stephenafamo/bob/gen/bobgen-mysql@latest
+MYSQL_DSN=user:pass@tcp(host:port)/dbname go run github.com/templatedop/bob/gen/bobgen-mysql@latest
 
 # With configuration file
-go run github.com/stephenafamo/bob/gen/bobgen-mysql@latest -c ./config/bobgen.yaml
+go run github.com/templatedop/bob/gen/bobgen-mysql@latest -c ./config/bobgen.yaml
 ```
 
 **SQLite**
 ```sh
 # With env variable
-SQLITE_DSN=test.db go run github.com/stephenafamo/bob/gen/bobgen-sqlite@latest
+SQLITE_DSN=test.db go run github.com/templatedop/bob/gen/bobgen-sqlite@latest
 
 # With configuration file
-go run github.com/stephenafamo/bob/gen/bobgen-sqlite@latest -c ./config/bobgen.yaml
+go run github.com/templatedop/bob/gen/bobgen-sqlite@latest -c ./config/bobgen.yaml
 ```
 
 **SQL Files**
 ```sh
 # With env variable
-SQL_DIALECT=psql go run github.com/stephenafamo/bob/gen/bobgen-sql@latest
+SQL_DIALECT=psql go run github.com/templatedop/bob/gen/bobgen-sql@latest
 
 # With configuration file
-go run github.com/stephenafamo/bob/gen/bobgen-sql@latest -c ./config/bobgen.yaml
+go run github.com/templatedop/bob/gen/bobgen-sql@latest -c ./config/bobgen.yaml
 ```
 Refer to [driver / dialect specific documentation](#available-drivers) for more details
 

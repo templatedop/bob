@@ -24,7 +24,7 @@ import (
     "log"
 
     "github.com/jackc/pgx/v5"
-    bobpgx "github.com/stephenafamo/bob/drivers/pgx"
+    bobpgx "github.com/templatedop/bob/drivers/pgx"
 )
 
 func main() {
@@ -260,5 +260,5 @@ go test -v ./drivers/pgx/... -run TestBatch
 ## Additional Resources
 
 - [pgx Batch Documentation](https://pkg.go.dev/github.com/jackc/pgx/v5#Batch)
-- [Bob Documentation](https://github.com/stephenafamo/bob)
+- [Bob Documentation](https://github.com/templatedop/bob)
 - [PostgreSQL Protocol Documentation](https://www.postgresql.org/docs/current/protocol.html)
