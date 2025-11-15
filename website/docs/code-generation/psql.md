@@ -47,7 +47,7 @@ The values that exist for the drivers:
 
 | Name          | Description                                       | Default                  |
 | ------------- | ------------------------------------------------- | ------------------------ |
-| driver        | Driver to use for generating driver-specific code | `github.com/lib/pq`      |
+| driver        | Driver to use (ONLY pgx native supported) | `github.com/jackc/pgx/v5` |
 | dsn           | URL to connect to                                 |                          |
 | schemas       | Schemas find tables in                            | ["public"]               |
 | shared_schema | Schema to not include prefix in model             | first value in "schemas" |
@@ -59,16 +59,28 @@ The values that exist for the drivers:
 
 ## Driver-specific code
 
-The `driver` configuration option enables Bob to generate code that is tailored to the specifics of the selected `database/sql` driver.
+:::danger IMPORTANT: pgx Native Driver Only
 
-For Postgres, the supported drivers are:
+**As of this version, Bob ONLY supports the pgx native driver for PostgreSQL.**
 
-- [github.com/lib/pq](https://pkg.go.dev/github.com/lib/pq) (default)
-- [github.com/jackc/pgx](https://pkg.go.dev/github.com/jackc/pgx)
-- [github.com/jackc/pgx/v4](https://pkg.go.dev/github.com/jackc/pgx/v4)
-- [github.com/jackc/pgx/v5](https://pkg.go.dev/github.com/jackc/pgx/v5)
+The following drivers are **NO LONGER SUPPORTED**:
+- ❌ `github.com/lib/pq` - **REMOVED** (deprecated, no batch support)
+- ❌ `github.com/jackc/pgx/v5/stdlib` - **REMOVED** (no batch support, missing features)
+- ❌ Older pgx versions (v1-v4) - **REMOVED**
 
-Bob leverages driver-specific code to perform precise error matching for [generated error constants](./usage#generated-error-constants).
+**You MUST use**: `github.com/jackc/pgx/v5` (pgx native driver)
+
+See the [pgx driver documentation](https://github.com/stephenafamo/bob/tree/main/drivers/pgx) for setup and usage.
+
+:::
+
+The `driver` configuration option enables Bob to generate code that is tailored to the pgx native driver.
+
+For Postgres, the **only** supported driver is:
+
+- ✅ [github.com/jackc/pgx/v5](https://pkg.go.dev/github.com/jackc/pgx/v5) - **Native pgx driver** (default and required)
+
+Bob leverages pgx-specific features including batch operations, binary protocol, and precise error matching for [generated error constants](./usage#generated-error-constants).
 
 ## Only/Except:
 

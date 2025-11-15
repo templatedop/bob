@@ -19,10 +19,13 @@ import (
 )
 
 const (
-	pqDriver = "github.com/lib/pq"
-	// pgxDriver = "github.com/jackc/pgx/v5"
-	pgxStdlibDriver = "github.com/jackc/pgx/v5/stdlib"
-	defaultDriver   = pqDriver
+	pgxDriver     = "github.com/jackc/pgx/v5"
+	defaultDriver = pgxDriver
+
+	// DEPRECATED: These drivers are no longer supported for PostgreSQL with Bob
+	// Use pgx native driver only
+	// pqDriver        = "github.com/lib/pq"         // REMOVED: Deprecated, no batch support
+	// pgxStdlibDriver = "github.com/jackc/pgx/v5/stdlib" // REMOVED: No batch support
 )
 
 var rgxValidColumnName = regexp.MustCompile(`(?i)^[a-z_][a-z0-9_]*$`)
@@ -71,14 +74,24 @@ func New(config Config) Interface {
 	}
 
 	switch config.Driver {
-	// These are the only supported drivers
-	case pqDriver, pgxStdlibDriver:
-	// case pgxDriver:
+	// pgx native is the ONLY supported driver for PostgreSQL
+	case pgxDriver:
+		// OK
 	default:
+		// Provide helpful error messages for deprecated drivers
+		if config.Driver == "github.com/lib/pq" {
+			panic("lib/pq is no longer supported. Use pgx native driver (github.com/jackc/pgx/v5) instead. " +
+				"See: https://github.com/stephenafamo/bob/tree/main/drivers/pgx")
+		}
+		if config.Driver == "github.com/jackc/pgx/v5/stdlib" {
+			panic("pgx/stdlib is no longer supported. Use pgx native driver (github.com/jackc/pgx/v5) instead. " +
+				"Pgx native provides better performance and batch operation support. " +
+				"See: https://github.com/stephenafamo/bob/tree/main/drivers/pgx")
+		}
 		panic(fmt.Sprintf(
-			"unsupported driver %s, supported drivers are: %q, %q",
-			config.Driver, pqDriver, pgxStdlibDriver,
-			// pgxDriver,
+			"unsupported driver %s. Only pgx native driver is supported: %q\n"+
+				"See: https://github.com/stephenafamo/bob/tree/main/drivers/pgx",
+			config.Driver, pgxDriver,
 		))
 	}
 

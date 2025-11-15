@@ -79,17 +79,11 @@ func testPostgresDriver(t *testing.T, dsn string) {
 		driver string
 	}{
 		{
-			name:   "pq",
-			driver: "github.com/lib/pq",
+			name:   "pgx-v5",
+			driver: "github.com/jackc/pgx/v5",
 		},
-		// {
-		// 	name:       "pgx-v5",
-		// 	driver: "github.com/jackc/pgx/v5",
-		// },
-		{
-			name:   "pgx-v5-std",
-			driver: "github.com/jackc/pgx/v5/stdlib",
-		},
+		// REMOVED: lib/pq and pgx/stdlib are no longer supported
+		// Only pgx native driver is supported for PostgreSQL
 	}
 
 	for _, tt := range tests {
