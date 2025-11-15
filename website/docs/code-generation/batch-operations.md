@@ -31,6 +31,12 @@ Batch operations allow you to send multiple SQL statements to the database in a 
 - Operations that need intermediate results
 - Very large batches (>10,000 statements) - split into chunks
 
+## 📚 Related Guides
+
+- **New to batches?** Start with [Quick Start (5 min)](./batch-quick-start)
+- **Using generated code?** See [Batches with Generated Code](./batch-with-generated-code)
+- **Full example project:** [examples/batch-api](https://github.com/stephenafamo/bob/tree/main/examples/batch-api)
+
 ## Complete Workflow
 
 ### Step 1: Write Your SQL Queries
@@ -80,20 +86,34 @@ no_tests: false
 
 # PostgreSQL configuration
 psql:
-  # Database connection string
+  # ✅ REQUIRED: Database connection string
   dsn: "${DATABASE_URL}"
 
-  # Folders containing SQL query files
+  # ✅ REQUIRED: Folders containing SQL query files
+  # This tells Bob where to find your .sql files for code generation
   queries:
-    - queries
+    - queries              # Main queries folder
+    - api/queries          # Can have multiple folders
 
-  # Optional: specify schemas to include
+  # ✅ REQUIRED: Schemas to generate from
   schemas:
     - public
 
   # Optional: driver for generated code
   driver: "github.com/jackc/pgx/v5/stdlib"
 ```
+
+**⚠️ IMPORTANT:** The `queries:` configuration is **REQUIRED** for query code generation!
+
+**Without** `queries:` in YAML:
+- ❌ No query functions generated
+- ✅ Models still generated from database tables
+- ⚠️ You can still use batches, but with manual SQL strings
+
+**With** `queries:` configured:
+- ✅ Type-safe query functions generated from `.sql` files
+- ✅ Can use generated SQL with batch operations
+- ✅ SQL is validated against your database schema
 
 **Environment Variables:**
 

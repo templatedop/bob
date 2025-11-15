@@ -29,8 +29,18 @@ This starts PostgreSQL on `localhost:5432` with:
 # Install code generator
 go install github.com/stephenafamo/bob/gen/dopgen-psql@latest
 
-# Generate from queries
+# Generate from queries (uses bobgen.yaml)
 dopgen-psql -c bobgen.yaml
+```
+
+**⚠️ Note:** The `bobgen.yaml` file includes `queries: [queries]` which tells Bob to generate code from the `.sql` files in the `queries/` folder. This is **required** for query code generation!
+
+```yaml
+# bobgen.yaml (already configured)
+psql:
+  dsn: "${DATABASE_URL}"
+  queries:              # ← REQUIRED for batch operations
+    - queries           # ← Points to queries/*.sql files
 ```
 
 ### 3. Run the API

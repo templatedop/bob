@@ -63,10 +63,17 @@ output: generated
 pkgname: db
 
 psql:
+  # Database connection
   dsn: "postgres://demo:demo@localhost:5432/demo?sslmode=disable"
+
+  # ⚠️ REQUIRED: Tell Bob where to find .sql query files
   queries:
-    - queries
+    - queries   # This folder contains insert_product.sql
 ```
+
+**📌 Key Point:** The `queries:` line is **required** to generate code from your SQL files!
+
+Without it, Bob only generates models from database tables, not query functions.
 
 ## Step 4: Generate Code (30 seconds)
 
@@ -357,8 +364,14 @@ docker rm bob-batch-demo
 
 ✅ You've learned how to:
 - Set up batch operations with Bob
+- Configure YAML with `queries:` (required for code generation)
 - Insert 100+ records in <50ms
 - Achieve 10-100x performance improvement
 - Use batches without explicit transactions
 
-**Ready for production?** Check out the [complete guide](./batch-operations) and [example project](https://github.com/stephenafamo/bob/tree/main/examples/batch-api)!
+**📌 Key Point:** The `queries:` configuration in `bobgen.yaml` is **required** to generate code from your `.sql` files. Without it, you'll only get model generation, not query functions!
+
+**Ready for production?** Check out:
+- [Complete Guide](./batch-operations) - All features and patterns
+- [Batches with Generated Code](./batch-with-generated-code) - Integration guide
+- [Example Project](https://github.com/stephenafamo/bob/tree/main/examples/batch-api) - Full REST API
