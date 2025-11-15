@@ -61,10 +61,10 @@ See [configuration](./configuration) for details and other customizable options.
 
 ```sh
 # With env variable
-PSQL_DSN=postgres://user:pass@host:port/dbname go run github.com/stephenafamo/bob/gen/bobgen-psql@latest
+PSQL_DSN=postgres://user:pass@host:port/dbname go run github.com/stephenafamo/bob/gen/dopgen-psql@latest
 
 # With configuration file
-go run github.com/stephenafamo/bob/gen/bobgen-psql@latest -c ./config/bobgen.yaml
+go run github.com/stephenafamo/bob/gen/dopgen-psql@latest -c ./config/bobgen.yaml
 ```
 **MySQL**
 

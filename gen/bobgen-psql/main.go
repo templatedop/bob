@@ -23,9 +23,9 @@ func main() {
 	defer cancel()
 
 	app := &cli.App{
-		Name:      "bobgen-psql",
+		Name:      "dopgen-psql",
 		Usage:     "Generate models and factories from your PostgreSQL database",
-		UsageText: "bobgen-psql [-c FILE]",
+		UsageText: "dopgen-psql [-c FILE]",
 		Version:   helpers.Version(),
 		Flags: []cli.Flag{
 			&cli.StringFlag{
