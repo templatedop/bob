@@ -1,9 +1,9 @@
 package mysql
 
 import (
-	"github.com/stephenafamo/bob"
-	"github.com/stephenafamo/bob/dialect/mysql/dialect"
-	"github.com/stephenafamo/bob/orm"
+	"github.com/templatedop/bob"
+	"github.com/templatedop/bob/dialect/mysql/dialect"
+	"github.com/templatedop/bob/orm"
 )
 
 type (

@@ -1,6 +1,6 @@
 # Bob: Go SQL Access Toolkit
 
-[![Test Status](https://github.com/stephenafamo/bob/actions/workflows/test.yml/badge.svg)](https://github.com/stephenafamo/bob/actions/workflows/test.yml) ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/stephenafamo/bob) [![Go Reference](https://pkg.go.dev/badge/github.com/stephenafamo/bob.svg)](https://pkg.go.dev/github.com/stephenafamo/bob) [![Go Report Card](https://goreportcard.com/badge/github.com/stephenafamo/bob)](https://goreportcard.com/report/github.com/stephenafamo/bob) ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/stephenafamo/bob) [![Coverage Status](https://coveralls.io/repos/github/stephenafamo/bob/badge.svg)](https://coveralls.io/github/stephenafamo/bob)
+[![Test Status](https://github.com/templatedop/bob/actions/workflows/test.yml/badge.svg)](https://github.com/templatedop/bob/actions/workflows/test.yml) ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/templatedop/bob) [![Go Reference](https://pkg.go.dev/badge/github.com/templatedop/bob.svg)](https://pkg.go.dev/github.com/templatedop/bob) [![Go Report Card](https://goreportcard.com/badge/github.com/templatedop/bob)](https://goreportcard.com/report/github.com/templatedop/bob) ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/templatedop/bob) [![Coverage Status](https://coveralls.io/repos/github/templatedop/bob/badge.svg)](https://coveralls.io/github/templatedop/bob)
 
 ## Links
 
@@ -47,7 +47,7 @@ Check out [the documentation][docs] for more information.
 1. [Bob vs Jet](https://bob.stephenafamo.com/vs/jet)
 
 [docs]: https://bob.stephenafamo.com/docs
-[reference]: https://pkg.go.dev/github.com/stephenafamo/bob
+[reference]: https://pkg.go.dev/github.com/templatedop/bob
 
 ## The layers of Bob
 
@@ -170,7 +170,7 @@ $ go test ./...
 If you're interested in data [race detection](https://go.dev/doc/articles/race_detector) and [coverage](https://go.dev/blog/integration-test-coverage), both of which are done by the Github workflow prior to merging code, you'll need to add a few more arguments:
 
 ```
-$ go test -race -covermode atomic --coverprofile=covprofile.out -coverpkg=github.com/stephenafamo/bob/... ./...
+$ go test -race -covermode atomic --coverprofile=covprofile.out -coverpkg=github.com/templatedop/bob/... ./...
 ```
 
 ### Workflows
@@ -181,4 +181,4 @@ The project uses [Github Actions](https://docs.github.com/en/actions) as defined
 
 Thanks to all the people who have contributed to Bob!
 
-[![contributors](https://contributors-img.web.app/image?repo=stephenafamo/bob)](https://github.com/stephenafamo/bob/graphs/contributors)
+[![contributors](https://contributors-img.web.app/image?repo=templatedop/bob)](https://github.com/templatedop/bob/graphs/contributors)

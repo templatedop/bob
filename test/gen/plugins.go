@@ -8,8 +8,8 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/stephenafamo/bob/gen"
-	"github.com/stephenafamo/bob/gen/drivers"
+	"github.com/templatedop/bob/gen"
+	"github.com/templatedop/bob/gen/drivers"
 )
 
 //go:embed templates

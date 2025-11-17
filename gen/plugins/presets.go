@@ -1,6 +1,6 @@
 package plugins
 
-import "github.com/stephenafamo/bob/internal"
+import "github.com/templatedop/bob/internal"
 
 //nolint:gochecknoglobals
 var PresetAll = Config{

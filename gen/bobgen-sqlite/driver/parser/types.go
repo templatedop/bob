@@ -4,8 +4,8 @@ import (
 	"slices"
 	"strings"
 
-	antlrhelpers "github.com/stephenafamo/bob/gen/bobgen-helpers/parser/antlrhelpers"
-	"github.com/stephenafamo/bob/gen/drivers"
+	antlrhelpers "github.com/templatedop/bob/gen/bobgen-helpers/parser/antlrhelpers"
+	"github.com/templatedop/bob/gen/drivers"
 	sqliteparser "github.com/stephenafamo/sqlparser/sqlite"
 )
 

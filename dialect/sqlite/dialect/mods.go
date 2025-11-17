@@ -1,10 +1,10 @@
 package dialect
 
 import (
-	"github.com/stephenafamo/bob"
-	"github.com/stephenafamo/bob/clause"
-	"github.com/stephenafamo/bob/expr"
-	"github.com/stephenafamo/bob/mods"
+	"github.com/templatedop/bob"
+	"github.com/templatedop/bob/clause"
+	"github.com/templatedop/bob/expr"
+	"github.com/templatedop/bob/mods"
 )
 
 func With[Q interface{ AppendCTE(bob.Expression) }](name string, columns ...string) CTEChain[Q] {

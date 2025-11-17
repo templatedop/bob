@@ -12,10 +12,10 @@ Generates an ORM based on SQL schema files
 
 ```sh
 # With env variable
-SQL_DIALECT=psql go run github.com/stephenafamo/bob/gen/bobgen-sql@latest
+SQL_DIALECT=psql go run github.com/templatedop/bob/gen/bobgen-sql@latest
 
 # With configuration file
-go run github.com/stephenafamo/bob/gen/bobgen-sql@latest -c ./config/bobgen.yaml
+go run github.com/templatedop/bob/gen/bobgen-sql@latest -c ./config/bobgen.yaml
 ```
 
 ### Driver Configuration

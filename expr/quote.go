@@ -4,7 +4,7 @@ import (
 	"context"
 	"io"
 
-	"github.com/stephenafamo/bob"
+	"github.com/templatedop/bob"
 )
 
 func Quote(aa ...string) bob.Expression {

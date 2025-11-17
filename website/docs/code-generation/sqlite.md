@@ -12,10 +12,10 @@ Generates an ORM based on a sqlite database schema
 
 ```sh
 # With env variable
-SQLITE_DSN=test.db go run github.com/stephenafamo/bob/gen/bobgen-sqlite@latest
+SQLITE_DSN=test.db go run github.com/templatedop/bob/gen/bobgen-sqlite@latest
 
 # With configuration file
-go run github.com/stephenafamo/bob/gen/bobgen-sqlite@latest -c ./config/bobgen.yaml
+go run github.com/templatedop/bob/gen/bobgen-sqlite@latest -c ./config/bobgen.yaml
 ```
 
 ### Driver Configuration

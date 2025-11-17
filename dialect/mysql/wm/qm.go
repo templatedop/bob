@@ -4,9 +4,9 @@ import (
 	"context"
 	"io"
 
-	"github.com/stephenafamo/bob"
-	"github.com/stephenafamo/bob/clause"
-	"github.com/stephenafamo/bob/dialect/mysql/dialect"
+	"github.com/templatedop/bob"
+	"github.com/templatedop/bob/clause"
+	"github.com/templatedop/bob/dialect/mysql/dialect"
 )
 
 func BasedOn(name string) bob.Mod[*clause.Window] {

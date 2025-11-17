@@ -4,9 +4,9 @@ import (
 	"context"
 	"io"
 
-	"github.com/stephenafamo/bob"
-	"github.com/stephenafamo/bob/clause"
-	"github.com/stephenafamo/bob/expr"
+	"github.com/templatedop/bob"
+	"github.com/templatedop/bob/clause"
+	"github.com/templatedop/bob/expr"
 )
 
 type QueryMods[T any] []bob.Mod[T]

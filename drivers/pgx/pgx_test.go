@@ -4,7 +4,7 @@ import (
 	"database/sql"
 
 	"github.com/jackc/pgx/v5"
-	"github.com/stephenafamo/bob"
+	"github.com/templatedop/bob"
 	"github.com/stephenafamo/scan"
 )
 

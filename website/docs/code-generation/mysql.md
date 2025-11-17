@@ -12,10 +12,10 @@ Generates an ORM based on a MySQL database schema
 
 ```sh
 # With env variable
-MYSQL_DSN=user:pass@tcp(host:port)/dbname go run github.com/stephenafamo/bob/gen/bobgen-mysql@latest
+MYSQL_DSN=user:pass@tcp(host:port)/dbname go run github.com/templatedop/bob/gen/bobgen-mysql@latest
 
 # With configuration file
-go run github.com/stephenafamo/bob/gen/bobgen-mysql@latest -c ./config/bobgen.yaml
+go run github.com/templatedop/bob/gen/bobgen-mysql@latest -c ./config/bobgen.yaml
 ```
 
 ### Driver Configuration

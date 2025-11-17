@@ -4,8 +4,8 @@ import (
 	"context"
 	"io"
 
-	"github.com/stephenafamo/bob"
-	"github.com/stephenafamo/bob/expr"
+	"github.com/templatedop/bob"
+	"github.com/templatedop/bob/expr"
 )
 
 type Setter[T, InsertQ, UpdateQ any] interface {

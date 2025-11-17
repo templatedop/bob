@@ -5,13 +5,13 @@ import (
 	"testing"
 
 	"github.com/antlr4-go/antlr/v4"
-	"github.com/stephenafamo/bob"
-	"github.com/stephenafamo/bob/dialect/sqlite"
-	"github.com/stephenafamo/bob/dialect/sqlite/dialect"
-	"github.com/stephenafamo/bob/dialect/sqlite/fm"
-	"github.com/stephenafamo/bob/dialect/sqlite/sm"
-	"github.com/stephenafamo/bob/dialect/sqlite/wm"
-	testutils "github.com/stephenafamo/bob/test/utils"
+	"github.com/templatedop/bob"
+	"github.com/templatedop/bob/dialect/sqlite"
+	"github.com/templatedop/bob/dialect/sqlite/dialect"
+	"github.com/templatedop/bob/dialect/sqlite/fm"
+	"github.com/templatedop/bob/dialect/sqlite/sm"
+	"github.com/templatedop/bob/dialect/sqlite/wm"
+	testutils "github.com/templatedop/bob/test/utils"
 	sqliteparser "github.com/stephenafamo/sqlparser/sqlite"
 )
 

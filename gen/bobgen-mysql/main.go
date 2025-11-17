@@ -7,10 +7,10 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/stephenafamo/bob/gen"
-	helpers "github.com/stephenafamo/bob/gen/bobgen-helpers"
-	"github.com/stephenafamo/bob/gen/bobgen-mysql/driver"
-	"github.com/stephenafamo/bob/gen/plugins"
+	"github.com/templatedop/bob/gen"
+	helpers "github.com/templatedop/bob/gen/bobgen-helpers"
+	"github.com/templatedop/bob/gen/bobgen-mysql/driver"
+	"github.com/templatedop/bob/gen/plugins"
 	"github.com/urfave/cli/v2"
 )
 

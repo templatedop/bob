@@ -5,7 +5,7 @@ description: Manipulate column lists
 
 # Columns
 
-The [`expr.Columns`](https://pkg.go.dev/github.com/stephenafamo/bob/expr.Columns) type is a bob [expression](../query-builder/building-queries#expressions).
+The [`expr.Columns`](https://pkg.go.dev/github.com/templatedop/bob/expr.Columns) type is a bob [expression](../query-builder/building-queries#expressions).
 
 To create a new columns list, use `orm.NewColumns(names ...string)`. You can then add the parent table with [WithParent()](#withparent)
 

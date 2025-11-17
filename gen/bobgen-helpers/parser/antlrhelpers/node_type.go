@@ -3,7 +3,7 @@ package antlrhelpers
 import (
 	"fmt"
 
-	"github.com/stephenafamo/bob/gen/drivers"
+	"github.com/templatedop/bob/gen/drivers"
 )
 
 type NodeTypes []NodeType

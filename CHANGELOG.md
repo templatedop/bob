@@ -53,7 +53,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix issue with randomization test when enum is only used in an array.
 - Fix issue with using `CompareExpr` with values that are null.
 - Fix issue with imports in query tests.
-- Fix issue with detecting the columns in a CTE in `bobgen-psql`.
+- Fix issue with detecting the columns in a CTE in `dopgen-psql`.
 - Properly detect the end of a function call in postgres qury parser.
 
 ## [v0.40.1] - 2025-08-14
@@ -122,7 +122,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - When generating code for queries, The `All` method of the generated query will return a struct with nested fields instead of a flat struct.
   - columns with dots (`.`) are assumed to be a `to-many` nested field.
   - columns with double underscores (`__`) are assumed to be a `to-one` nested field.
-- Implement `--prefix` annotation in queries for `bobgen-psql`.
+- Implement `--prefix` annotation in queries for `dopgen-psql`.
 - Add FromExisting**Rel** method to factories to create a template from an existing model. (thanks @dutow)
 - Add WithExisting**Rel** to factory mods to attach an existing model as a relationship. (thanks @dutow)
 - Added support in psql for combined args (order by, limit etc.) in combined queries and use parens if they are present. (@iwyrkore)
@@ -147,7 +147,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed some issues with creating relationships in the factory by avoiding trying to reuse models.
 - Fix issues with generating code for queries with duplicate return column names.
 - Updated gen table detail queries to use context. (thanks @singhsays)
-- Properly detect `bool`, `timestamp` and `timestamptz` types in `bobgen-psql`.
+- Properly detect `bool`, `timestamp` and `timestamptz` types in `dopgen-psql`.
 - Fix transformer for single result queries.
 - Properly handle indexes where the sorting order can be null.
 - Check for nullability when loading relationships.
@@ -167,7 +167,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Correctly build models with nested relationships in the factory.
-- Fix a performance issue with code generation in `bobgen-psql`.
+- Fix a performance issue with code generation in `dopgen-psql`.
 - Use the correct alias when generating table columns.
 - Fix issue with generating factory code for tables with schema names.
 
@@ -315,20 +315,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Fix bug with `bobgen-psql` parsing of string identifiers in certain cases.
+- Fix bug with `dopgen-psql` parsing of string identifiers in certain cases.
 
 ## [v0.34.1] - 2025-04-30
 
 ### Fixed
 
 - Remove unnecessary limitation to place `FETCH WITH TIES` before `OFFSET`.
-- Fix issue with verifying statements in `bobgen-psql`.
+- Fix issue with verifying statements in `dopgen-psql`.
 
 ## [v0.34.0] - 2025-04-30
 
 ### Added
 
-- Added support to generate code for `UPDATE`, and `DELETE` queries in `bobgen-psql`.
+- Added support to generate code for `UPDATE`, and `DELETE` queries in `dopgen-psql`.
 
 ### Changed
 
@@ -349,7 +349,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Added support to generate code for `INSERT` queries in `bobgen-psql`.
+- Added support to generate code for `INSERT` queries in `dopgen-psql`.
 - `clause.Confict` now takes `bob.Expression`, and the fields are now moved to a `clause.ConflictClause` struct.
 
 ### Changed
@@ -362,9 +362,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Fix issue with column query annotations in `bobgen-psql`.
-- Fix issue with parsing multiple queries in the same file in `bobgen-psql`.
-- Fix issue with correctly detecting the comment for the query annotation in `bobgen-psql`.
+- Fix issue with column query annotations in `dopgen-psql`.
+- Fix issue with parsing multiple queries in the same file in `dopgen-psql`.
+- Fix issue with correctly detecting the comment for the query annotation in `dopgen-psql`.
 - Use a transaction in generated query tests.
 - Account for LEFT, RIGHT and FULL joins when determining the nullability of a column.
 - Generate WHERE helpers for `ON CONFLICT` clauses.
@@ -403,7 +403,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `clause.For` renemaed to `clause.Locks` and can now take multiple locks.
 - `clause.Fetch` now takes `any` instead of an integer.
 - Several changes to the `drivers.Query` type as support is added for the new query parser.
-- Enum types can now be matched by `db_type` in bobgen-psql as `schema.enum_type`. (thanks @abramlab)
+- Enum types can now be matched by `db_type` in dopgen-psql as `schema.enum_type`. (thanks @abramlab)
 
 ### Removed
 
@@ -635,7 +635,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `fm` mods to all supported dialects (psql, mysql and sqlite). These are mods for functions and are used to modify the function call. For example:
 
   ```go
-  // import "github.com/stephenafamo/bob/dialect/psql/fm"
+  // import "github.com/templatedop/bob/dialect/psql/fm"
   psql.F( "count", "*",)(fm.Filter(psql.Quote("status").EQ(psql.S("done"))))
   ```
 
@@ -667,7 +667,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   // Before
   psql.F( "count", "*",).FilterWhere(psql.Quote("status").EQ(psql.S("done"))),
   // After
-  // import "github.com/stephenafamo/bob/dialect/psql/fm"
+  // import "github.com/templatedop/bob/dialect/psql/fm"
   psql.F( "count", "*",)(fm.Filter(psql.Quote("status").EQ(psql.S("done")))),
   ```
 

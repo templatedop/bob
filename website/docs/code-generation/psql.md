@@ -12,10 +12,10 @@ Generates an ORM based on a postgres database schema
 
 ```sh
 # With env variable
-PSQL_DSN=postgres://user:pass@host:port/dbname go run github.com/stephenafamo/bob/gen/bobgen-psql@latest
+PSQL_DSN=postgres://user:pass@host:port/dbname go run github.com/templatedop/bob/gen/dopgen-psql@latest
 
 # With configuration file
-go run github.com/stephenafamo/bob/gen/bobgen-psql@latest -c ./config/bobgen.yaml
+go run github.com/templatedop/bob/gen/dopgen-psql@latest -c ./config/bobgen.yaml
 ```
 
 ### Driver Configuration
@@ -108,3 +108,51 @@ psql:
     "*":
       - secret_col
 ```
+
+## Batch Operations
+
+PostgreSQL with Bob supports high-performance batch operations that can provide **10-100x performance improvements** for bulk inserts, updates, and related operations.
+
+### Quick Example
+
+```go
+// Acquire connection
+conn, _ := pool.Acquire(ctx)
+defer conn.Release()
+
+// Create batch - NO explicit transaction needed!
+batch := &pgx.Batch{}
+for _, product := range products {
+    batch.Queue(
+        "INSERT INTO products (name, price) VALUES ($1, $2)",
+        product.Name, product.Price,
+    )
+}
+
+// Send batch - implicitly transactional
+results := conn.SendBatch(ctx, batch)
+defer results.Close()
+
+// Process results
+for range products {
+    _, err := results.Exec()
+    // handle error
+}
+```
+
+**Performance:** Inserts 1000 products in ~50ms instead of ~5000ms
+
+### Learn More
+
+- **[Complete Batch Operations Guide](./batch-operations)** - Full documentation from YAML to production API
+- **[Example Project](https://github.com/templatedop/bob/tree/main/examples/batch-api)** - Runnable REST API with batch operations
+- **[Test Suite](https://github.com/templatedop/bob/tree/main/test/batch_codegen)** - Comprehensive test examples
+
+### Key Features
+
+✅ **Implicitly Transactional** - No need for explicit `BEGIN/COMMIT`
+✅ **Multiple Operations** - Mix INSERT, SELECT, UPDATE, DELETE in one batch
+✅ **Error Handling** - All operations succeed or all rollback
+✅ **Works with Generated Code** - Use your dopgen-psql generated queries
+
+See the [Batch Operations Guide](./batch-operations) for complete workflow from YAML configuration to production deployment.

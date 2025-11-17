@@ -10,9 +10,9 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/stephenafamo/bob/gen/drivers"
-	"github.com/stephenafamo/bob/gen/language"
-	"github.com/stephenafamo/bob/orm"
+	"github.com/templatedop/bob/gen/drivers"
+	"github.com/templatedop/bob/gen/language"
+	"github.com/templatedop/bob/orm"
 	"github.com/volatiletech/strmangle"
 )
 

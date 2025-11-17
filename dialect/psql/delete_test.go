@@ -3,9 +3,9 @@ package psql_test
 import (
 	"testing"
 
-	"github.com/stephenafamo/bob/dialect/psql"
-	"github.com/stephenafamo/bob/dialect/psql/dm"
-	testutils "github.com/stephenafamo/bob/test/utils"
+	"github.com/templatedop/bob/dialect/psql"
+	"github.com/templatedop/bob/dialect/psql/dm"
+	testutils "github.com/templatedop/bob/test/utils"
 )
 
 func TestDelete(t *testing.T) {

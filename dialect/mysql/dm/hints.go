@@ -1,8 +1,8 @@
 package dm
 
 import (
-	"github.com/stephenafamo/bob"
-	"github.com/stephenafamo/bob/dialect/mysql/dialect"
+	"github.com/templatedop/bob"
+	"github.com/templatedop/bob/dialect/mysql/dialect"
 )
 
 func QBName(name string) bob.Mod[*dialect.DeleteQuery] {

@@ -7,10 +7,10 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/stephenafamo/bob/gen"
-	helpers "github.com/stephenafamo/bob/gen/bobgen-helpers"
-	"github.com/stephenafamo/bob/gen/bobgen-psql/driver"
-	"github.com/stephenafamo/bob/gen/plugins"
+	"github.com/templatedop/bob/gen"
+	helpers "github.com/templatedop/bob/gen/bobgen-helpers"
+	"github.com/templatedop/bob/gen/bobgen-psql/driver"
+	"github.com/templatedop/bob/gen/plugins"
 	"github.com/urfave/cli/v2"
 )
 
@@ -23,9 +23,9 @@ func main() {
 	defer cancel()
 
 	app := &cli.App{
-		Name:      "bobgen-psql",
+		Name:      "dopgen-psql",
 		Usage:     "Generate models and factories from your PostgreSQL database",
-		UsageText: "bobgen-psql [-c FILE]",
+		UsageText: "dopgen-psql [-c FILE]",
 		Version:   helpers.Version(),
 		Flags: []cli.Flag{
 			&cli.StringFlag{

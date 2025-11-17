@@ -1,8 +1,8 @@
 package sqlite
 
 import (
-	"github.com/stephenafamo/bob"
-	"github.com/stephenafamo/bob/dialect/sqlite/dialect"
+	"github.com/templatedop/bob"
+	"github.com/templatedop/bob/dialect/sqlite/dialect"
 )
 
 func Delete(queryMods ...bob.Mod[*dialect.DeleteQuery]) bob.BaseQuery[*dialect.DeleteQuery] {
